@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: aqua;
+
+  .frame {
+    background-color: #fff;
+    flex-direction: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 24px #0004;
+    border-radius: 8px;
+    padding: 8px;
+
+    .hawk-container {
+      background-image: url('../public/hawkudo-corsa.jpg');
+      background-size: cover; /* A imagem cobre todo o elemento */
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      height: 80vh;
+      width: 64vw;
+      box-shadow: 0 0 8px #0001;
+      border-radius: 8px;
+
+      h1 {
+        padding: 8px 16px;
+        border-radius: 16px;
+        margin-top: 64px;
+        background-color: white;
+        opacity: 0.7;
+      }
+    }
+  }
+}

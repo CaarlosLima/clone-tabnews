@@ -1,3 +1,11 @@
 export default function Home() {
-  return <h1>Salve salve</h1>;
+  return (
+    <div className="page-container">
+      <div className="frame">
+        <div className="hawk-container">
+          <h1>O HOMI TA HABILITADO PORRA!!</h1>
+        </div>
+      </div>
+    </div>
+  );
 }
