@@ -22,7 +22,7 @@
     padding: 8px;
 
     .hawk-container {
-      background-image: url('../public/hawkudo-corsa.jpg');
+      background-image: url("../public/hawkudo-corsa.jpg");
       background-size: cover; /* A imagem cobre todo o elemento */
       display: flex;
       align-items: flex-start;

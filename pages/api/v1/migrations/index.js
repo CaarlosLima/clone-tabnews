@@ -1,12 +1,14 @@
-import database from 'infra/database';
-import migrationRunner from 'node-pg-migrate';
+import database from "infra/database";
+import migrationRunner from "node-pg-migrate";
 import { join } from "node:path";
 
 export default async function migrations(request, response) {
   const allowedMethods = ["GET", "POST"];
 
   if (!allowedMethods.includes(request.method)) {
-    return response.status(405).json({ error: `Method "${request.method}" not allowed` });
+    return response
+      .status(405)
+      .json({ error: `Method "${request.method}" not allowed` });
   }
 
   let dbClient;
@@ -30,9 +32,14 @@ export default async function migrations(request, response) {
     }
 
     if (request.method === "POST") {
-      const migratedMigrations = await migrationRunner({ ...defaultMigrationOptions, dryRun: false });
+      const migratedMigrations = await migrationRunner({
+        ...defaultMigrationOptions,
+        dryRun: false,
+      });
 
-      return response.status(migratedMigrations.length > 0 ? 201 : 200).json(migratedMigrations);
+      return response
+        .status(migratedMigrations.length > 0 ? 201 : 200)
+        .json(migratedMigrations);
     }
   } catch (error) {
     console.error(error);
