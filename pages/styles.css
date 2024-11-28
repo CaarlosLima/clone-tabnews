@@ -10,10 +10,10 @@
   align-items: center;
   justify-content: center;
   color: black;
-  background-color: aqua;
+  background-color: #0d1117;
 
   .frame {
-    background-color: #fff;
+    background-color: #fefefe;
     flex-direction: center;
     display: flex;
     align-items: center;
